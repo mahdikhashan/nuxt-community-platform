@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar fixed="top" toggleable="lg" type="dark" variant="info">
       <b-navbar-brand>
           <nuxt-link to="/">Community Platform</nuxt-link>
       </b-navbar-brand>

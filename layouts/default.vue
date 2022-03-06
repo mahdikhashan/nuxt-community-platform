@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation :sticky="true" />
+    <Navigation />
     <Banner />
     <b-container fluid>
       <b-row>
