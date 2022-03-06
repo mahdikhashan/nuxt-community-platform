@@ -1,5 +1,5 @@
 module.exports = {
-  root: off,
+  root: "off",
   env: {
     browser: true,
     node: true
