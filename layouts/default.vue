@@ -7,7 +7,7 @@
         <b-col>
           <Nuxt />
         </b-col>
-        <b-col col lg="2">fasdf</b-col>
+        <b-col col lg="3">fasdf</b-col>
       </b-row>
     </b-container>
   </div>
