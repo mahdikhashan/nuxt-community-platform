@@ -1,11 +1,5 @@
-<script>
-export default {
-    layout: 'default',
-}
-</script>
-
 <template>
-    <div>
-        <Nuxt />
-    </div>
+  <div>
+    <Nuxt />
+  </div>
 </template>

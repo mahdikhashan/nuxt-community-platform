@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Banner></Banner>
+    asdfasdfs
   </div>
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
-  layout: 'default'
+  layout: 'sidebar'
 }
 </script>
