@@ -17,5 +17,6 @@ module.exports = {
   // add your custom rules here
   rules: {
     "nuxt/recommended": "off",
+    "vue/multi-word-component-names": "off"
   }
 }
