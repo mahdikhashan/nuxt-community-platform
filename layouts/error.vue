@@ -1,10 +1,3 @@
-<script>
-export default {
-  props: ['error'],
-  layout: 'error'
-}
-</script>
-
 <template>
   <div>
     <h1 v-if="error.statusCode === 404">Page not found</h1>
@@ -12,3 +5,10 @@ export default {
     <nuxt-link to="/">Home Page</nuxt-link>
   </div>
 </template>
+
+<script>
+export default {
+  props: ['error'],
+  layout: 'error'
+}
+</script>
