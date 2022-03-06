@@ -1,9 +1,12 @@
 <template>
-  <Tutorial />
+  <div>
+    hey
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  layout: 'default'
 }
 </script>
