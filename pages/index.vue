@@ -1,6 +1,6 @@
 <template>
   <div>
-    hey
+    <Banner></Banner>
   </div>
 </template>
 
