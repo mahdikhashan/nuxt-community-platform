@@ -1,10 +1,10 @@
 <template>
-  <div>Index</div>
+  <div>categories</div>
 </template>
 
 <script>
 export default {
-  name: "IndexPage",
+  name: "CategoriesPage",
   layout: "default",
 };
 </script>
