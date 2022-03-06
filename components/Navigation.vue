@@ -10,10 +10,10 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item>
-            <nuxt-link to="/categories">Community Platform</nuxt-link>
+            <nuxt-link to="/categories">categories</nuxt-link>
           </b-nav-item>
-          <b-nav-item disabled>
-            <nuxt-link to="/discussuions">Community Platform</nuxt-link>
+          <b-nav-item>
+            <nuxt-link to="/discussions">discussuions</nuxt-link>
           </b-nav-item>
         </b-navbar-nav>
 
