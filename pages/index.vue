@@ -28,6 +28,13 @@
         :bookmarked="discussion.bookmarked"
       ></MiniDiscussion>
     </div>
+    <b-pagination-nav
+      v-model="currentPage"
+      :number-of-pages="pages"
+      base-url="#"
+      first-number
+      last-number
+    ></b-pagination-nav>
   </div>
 </template>
 
@@ -53,76 +60,84 @@ export default {
       ],
       discussions: [
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
           comments: 3,
           date: "March 2021",
-          bookmarked: false
+          bookmarked: false,
         },
       ],
       pages: 100,
