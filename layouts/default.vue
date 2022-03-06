@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation />
+    <Navigation :sticky="true"/>
     <Nuxt />
   </div>
 </template>
