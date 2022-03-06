@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <b-navbar fixed="top" toggleable="lg" type="dark" variant="info">
+  <div class="wrapper">
+    <b-navbar toggleable="lg" type="dark" variant="info">
       <b-navbar-brand>
-          <nuxt-link to="/">Community Platform</nuxt-link>
+        <nuxt-link to="/">Community Platform</nuxt-link>
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -54,7 +54,18 @@
 <script>
 export default {
   name: "Navigation",
+  data() {
+    return {
+      sticky: true,
+    };
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+</style>
