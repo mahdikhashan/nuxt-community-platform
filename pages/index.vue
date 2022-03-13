@@ -17,8 +17,9 @@
         last-number
       ></b-pagination-nav>
     </div>
-    <div v-for="(discussion, index) in discussions" :key="index">
+    <div>
       <MiniDiscussion
+        v-for="(discussion, index) in discussions" :key="index"
         :avatar="discussion.avatar"
         :author="discussion.author"
         :type="discussion.type"
@@ -146,3 +147,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+</style>
