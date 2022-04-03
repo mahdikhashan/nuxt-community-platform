@@ -6,20 +6,20 @@
       questions from the Expensify Community.
     </h4>
     <div>
-      <b-form>
-        <b-input-group class="mt-3">
-          <b-form-input></b-form-input>
-          <b-input-group-append>
-            <b-button variant="outline-success">Search</b-button>
-          </b-input-group-append>
-        </b-input-group>
-      </b-form>
+      <form>
+          <input placeholder="Search" />
+          <span>
+            <button variant="outline-success">Search</button>
+          </span>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Banner'
+}
 </script>
 
 <style>
