@@ -1,7 +1,7 @@
 <template>
   <div class="md">
     <div class="md--element">
-      <div style="display: flex; align-items: center;">
+      <div style="display: flex; align-items: center">
         <div class="md--element--avatar">
           <b-img
             v-bind="mainProps"
@@ -135,7 +135,7 @@ export default {
 }
 
 .md--element--menu {
-  
+  align-items: flex-start;
 }
 
 .md:first-child {
