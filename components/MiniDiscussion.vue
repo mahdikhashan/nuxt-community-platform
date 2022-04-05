@@ -41,14 +41,14 @@
       <div class="md--element--menu">
         <nuxt-link to="/categories">
           <img
-            src="../assets/images/svg/bookmark.svg"
+            src="bookmark.svg"
             alt="booked"
             style="width: 15px"
           />
         </nuxt-link>
         <nuxt-link to="/categories">
           <img
-            src="../assets/images/svg/dots.svg"
+            src="dots.svg"
             alt="booked"
             style="width: 25px"
           />

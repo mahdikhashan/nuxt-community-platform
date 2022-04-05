@@ -1,5 +1,5 @@
 <template>
-  <div id="vee-btn">
+  <div>
       <button>
           <slot></slot>
       </button>
@@ -8,10 +8,8 @@
 
 <script>
 export default {
-  name: 'vee-btn',
+  name: 'Button',
   props: {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
