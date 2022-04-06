@@ -1,11 +1,14 @@
 <template>
   <div>
     <Banner></Banner>
+    <NewPost></NewPost>
+    <Tag>Deep Dive 230</Tag>
   </div>
 </template>
 
 <script>
 import Banner from "../components/Banner.vue";
+import NewPost from "../components/NewPost.vue";
 export default {
   name: "IndexPage",
   data() {
@@ -102,6 +105,6 @@ export default {
       currentPage: 5,
     };
   },
-  components: { Banner }
+  components: { Banner, NewPost }
 };
 </script>
