@@ -1,9 +1,11 @@
 <template>
   <div>
+    <Banner></Banner>
   </div>
 </template>
 
 <script>
+import Banner from "../components/Banner.vue";
 export default {
   name: "IndexPage",
   data() {
@@ -24,8 +26,7 @@ export default {
       ],
       discussions: [
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -34,8 +35,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -44,8 +44,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -54,8 +53,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -64,8 +62,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -74,8 +71,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -84,8 +80,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -94,8 +89,7 @@ export default {
           bookmarked: false,
         },
         {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -108,5 +102,6 @@ export default {
       currentPage: 5,
     };
   },
+  components: { Banner }
 };
 </script>
