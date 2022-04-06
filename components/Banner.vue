@@ -32,7 +32,7 @@
               placeholder="Search"
               class="w-full p-2 pl-14 rounded-l-md"
             />
-            <button class="w-2/12 bg-green-500 rounded-r-md p-2">Search</button>
+            <button class="w-2/12 bg-green-500 rounded-r-md p-2 text-white">Search</button>
           </div>
         </form>
       </div>

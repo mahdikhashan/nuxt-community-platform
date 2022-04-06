@@ -277,9 +277,9 @@ export default {
       this.isNotification = false
       this.isMessage = false
       this.isProfile = false
-      this.$nextTick(() => {
-        this.$refs.search.focus();
-      });
+      // this.$nextTick(() => {
+      //  this.$refs.search.focus();
+      // });
     },
     enableNotification() {
       this.isNotification = !this.isNotification;
