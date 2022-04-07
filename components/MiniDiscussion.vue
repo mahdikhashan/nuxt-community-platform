@@ -1,16 +1,15 @@
 <template>
   <div class="md">
-    <div class="md--element">
-      <div style="display: flex; align-items: center">
-        <div class="md--element--avatar">
-          <b-img
-            v-bind="mainProps"
-            :src="avatar"
-            rounded="circle"
+    <div class="flex justify-between items-center h-[80px] w-full">
+      <div class="flex items-center">
+        <div class="ml-4">
+          <img
+            class="rounded-full w-11 h-11"
+            src="avatar.jpg"
             alt="Circle image"
-          ></b-img>
+          />
         </div>
-        <div class="md--element--content">
+        <div class="flex flex-col">
           <nuxt-link class="md--element--content__title" to="/categories"
             >Announcing the "Expensify CPA Card", built specifically for
             accountants</nuxt-link
@@ -95,15 +94,7 @@ export default {
   margin-left: 8px;
 }
 
-.md--element--avatar {
-  // nothing to style
-  margin-right: 16px;
-}
-
 .md--element--content {
-  display: flex;
-  flex-direction: column;
-
   * > a {
     color: rgb(118, 118, 118);
     font-size: 12px;

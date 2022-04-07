@@ -1,5 +1,5 @@
 <template>
-  <div class="flex bg-blue-900 items-center justify-between px-24 gap-4">
+  <div class="flex bg-blue-900 items-center justify-between xl:px-24 lg:px-10 gap-4">
     <div class="flex gap-2 py-2">
       <nuxt-link to="/">
         <div class="w-36">

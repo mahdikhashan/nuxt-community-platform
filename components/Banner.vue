@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col justify-center items-center bg-blue-900 py-[4.5rem]">
     <div class="w-2/3 items-center justify-center">
-      <h1 class="text-white text-4xl text-center">Community Platform</h1>
-      <h4 class="text-white text-md px-32 pt-4 text-center">
+      <h1 class="text-white text-2xl xl:text-4xl text-center">Community Platform</h1>
+      <h4 class="text-white text-md xl:px-32 pt-4 text-center">
         Answers to all your Expensify questions. Find support for user and admin
         questions from the Expensify Community.
       </h4>
       <div class="flex w-full items-center justify-center mt-4">
-        <form class="w-2/3 flex flex-row">
+        <form class="w-full xl:w-2/3 flex flex-row">
           <div class="flex flex-auto relative items-center pt-4">
             <span class="translate-x-9 text-gray-400">
               <svg
