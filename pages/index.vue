@@ -2,7 +2,12 @@
   <div>
     <Banner />
     <main class="container mx-auto flex justify-between mt-8">
-      <section class="w-[70%]"></section>
+      <section class="w-[70%] px-6 py-4">
+        <Notification>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </Notification>
+        <MiniDiscussion v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" :key="value"></MiniDiscussion>
+      </section>
       <aside class="w-[30%] px-6 py-4">
         <NewPost />
         <section class="w-full">
@@ -51,6 +56,8 @@
 <script>
 import Banner from "../components/Banner.vue";
 import NewPost from "../components/NewPost.vue";
+import MiniDiscussion from "../components/MiniDiscussion.vue";
+import Notification from "../components/Notification.vue";
 export default {
   name: "IndexPage",
   data() {
@@ -147,6 +154,6 @@ export default {
       currentPage: 5,
     };
   },
-  components: { Banner, NewPost }
+  components: { Banner, NewPost, MiniDiscussion, Notification }
 };
 </script>
