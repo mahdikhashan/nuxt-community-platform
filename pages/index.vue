@@ -5,10 +5,12 @@
       <section class="w-full xl:w-[70%] px-6 py-4 flex flex-col gap-2">
         <Notification>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Notification>
         <Sticker>Are you receiving SNAP/EBT benefits? The Expensify.org/SNAP-VAX campaign is live and accepting new members. Learn more about receiving $50 for submitting a SNAP receipt and $50 for getting your COVID-19 vaccine here and join today!</Sticker>
-        <MiniDiscussion
-          v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
-          :key="value"
-        ></MiniDiscussion>
+        <div class="my-4">
+          <MiniDiscussion
+            v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+            :key="value"
+          ></MiniDiscussion>
+        </div>
       </section>
       <aside class="w-full xl:w-[30%] px-6 py-4">
         <NewPost />
