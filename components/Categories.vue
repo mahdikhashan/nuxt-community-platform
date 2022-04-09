@@ -1,0 +1,49 @@
+<template>
+  <div class="h-[108px] last:border-b-[1px] last:border-gray-300 before:content-[''] before:border-t-[1px] before:block before:border-gray-300 before:w-[100%]">
+    <div class="flex justify-between items-center h-full w-full relative">
+      <div class="flex items-center">
+        <div class="flex flex-col ml-2">
+          <nuxt-link class="font-bold text-lg py-1" to="/categories">
+            Announcing
+          </nuxt-link>
+          <nuxt-link class="font-light text-sm py-1" to="/categories">
+            Information about Expensify and using the Community that doesn't relate to the product functionality.
+          </nuxt-link>
+          <div>
+            <span>
+              <nuxt-link to="/categories">
+                <span>{{ author }}</span>
+              </nuxt-link>
+              <span class="text-xs inline-block text-gray-500 my-[2px] mx-[4px]">12.1K discussions</span>
+              <span class="text-xs inline-block text-gray-500 my-[2px] mx-[4px]">5.9K views</span>
+              <span class="text-xs inline-block text-gray-500 my-[2px] mx-[4px]">0 comments</span>
+              <span class="text-xs inline-block text-gray-500 my-[2px] mx-[4px]"
+                >Started by
+                <nuxt-link to="/categories">
+                  <span>{{ author }}</span>
+                </nuxt-link>
+              </span>
+              <span class="text-xs inline-block text-gray-500 my-[2px] mx-[4px]">November 2021</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute top-2 right-1 flex items-center justify-center gap-1">
+        <nuxt-link to="/categories">
+          <img
+            src="dots.svg"
+            alt="booked"
+            style="width: 25px"
+          />
+        </nuxt-link>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Categories",
+};
+</script>

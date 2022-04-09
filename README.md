@@ -1,4 +1,4 @@
-# expensify_replica
+# Community Platform
 
 ## Build Setup
 
