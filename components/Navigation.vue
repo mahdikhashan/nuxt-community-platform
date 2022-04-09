@@ -9,10 +9,10 @@
           />
         </div>
       </nuxt-link>
-      <Link address="/discussions" v-if="isSearch">Discussions</Link>
-      <Link address="/categories" v-if="isSearch">Categories</Link>
+      <Link address="/discussions" v-if="!isSearch">Discussions</Link>
+      <Link address="/categories" v-if="!isSearch">Categories</Link>
     </div>
-    <div v-if="!isSearch" class="flex flex-auto relative items-center">
+    <div v-if="isSearch" class="flex flex-auto relative items-center">
       <span class="translate-x-9 text-gray-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
       <div class="relative">
         <button class="text-white hover:bg-blue-500 p-2 rounded-md" @click="enableSearch">
           <svg
-            v-if="isSearch"
+            v-if="!isSearch"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -277,19 +277,19 @@ export default {
       this.isNotification = false
       this.isMessage = false
       this.isProfile = false
-      // this.$nextTick(() => {
-      //  this.$refs.search.focus();
-      // });
+      this.$nextTick(() => {
+        document.querySelector('input[type="search"]').focus();
+      });
     },
     enableNotification() {
       this.isNotification = !this.isNotification;
-      this.isSearch = true
+      this.isSearch = false
       this.isMessage = false
       this.isProfile = false
     },
     enableMessage() {
       this.isMessage = !this.isMessage;
-      this.isSearch = true
+      this.isSearch = false
       this.isNotification = false
       this.isProfile = false
     },
