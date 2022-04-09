@@ -1,1 +1,1 @@
-[] fix search in navigation focus
+[x] fix search in navigation focus
