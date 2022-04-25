@@ -1,18 +1,47 @@
 <template>
   <div>
     <Banner />
-    <main class="container mx-auto flex lg:flex-col xl:flex-row justify-between mt-8">
+    <main
+      class="
+        container
+        mx-auto
+        flex
+        lg:flex-col
+        xl:flex-row
+        justify-between
+        mt-8
+      "
+    >
       <section class="w-full xl:w-[70%] px-6 py-4 flex flex-col gap-2">
-        <Notification>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Notification>
-        <Sticker>Are you receiving SNAP/EBT benefits? The Expensify.org/SNAP-VAX campaign is live and accepting new members. Learn more about receiving $50 for submitting a SNAP receipt and $50 for getting your COVID-19 vaccine here and join today!</Sticker>
+        <Notification
+          >Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit.</Notification
+        >
+        <Sticker
+          >Are you receiving SNAP/EBT benefits? The Expensify.org/SNAP-VAX
+          campaign is live and accepting new members. Learn more about receiving
+          $50 for submitting a SNAP receipt and $50 for getting your COVID-19
+          vaccine here and join today!</Sticker
+        >
         <div class="my-4">
           <MiniDiscussion
-            v-for="value in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+            v-for="value in [
+              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1,
+              2, 3, 4, 5, 6, 7, 8, 9, 10,
+            ]"
             :key="value"
           ></MiniDiscussion>
         </div>
       </section>
       <aside class="w-full xl:w-[30%] px-6 py-4">
+        <div v-if="isAuthenticated" class="flex flex-col gap-3 my-8">
+          <span class="text-black font-bold text-xl">Welcome!</span>
+          <p class="text-sm text-gray-700">It looks like you're new here. Sign in or register to get started.</p>
+          <div class="flex gap-4">
+            <Button>Sign In</Button>
+            <Button gray="true">Register</Button>
+          </div>
+        </div>
         <NewPost />
         <section class="w-full">
           <h3 class="font-bold text-lg pt-4 pb-2">Quick Links</h3>
@@ -26,19 +55,27 @@
             <li class="hover:text-blue-600">
               <nuxt-link to="/">Activity</nuxt-link>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">My Bookmarks</nuxt-link>
               <span>2</span>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">My Discussions</nuxt-link>
               <span>2</span>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">My Drafts</nuxt-link>
               <span>2</span>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">Unanswered</nuxt-link>
               <span>2</span>
             </li>
@@ -50,22 +87,32 @@
         <section>
           <h3 class="font-bold text-lg pt-4 pb-2">Categories</h3>
           <ul class="text-sm flex flex-col gap-[6px]">
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">All Categories</nuxt-link>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">Announcements</nuxt-link>
               <span>201</span>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">Help Docs and Webinars</nuxt-link>
               <span>504</span>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">Questions about community</nuxt-link>
               <span>2.1K</span>
             </li>
-            <li class="w-full flex flex-auto justify-between hover:text-blue-600">
+            <li
+              class="w-full flex flex-auto justify-between hover:text-blue-600"
+            >
               <nuxt-link to="/">Community.org</nuxt-link>
               <span>151</span>
             </li>
@@ -101,6 +148,7 @@ export default {
   name: "IndexPage",
   data() {
     return {
+      isAuthenticated: false,
       items: [
         {
           text: "Admin",
@@ -117,7 +165,8 @@ export default {
       ],
       discussions: [
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -126,7 +175,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -135,7 +185,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -144,7 +195,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -153,7 +205,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -162,7 +215,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -171,7 +225,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -180,7 +235,8 @@ export default {
           bookmarked: false,
         },
         {
-          avatar: "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
+          avatar:
+            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
           author: "Mahdi Khashan",
           type: "Announcement",
           views: 200,
@@ -193,6 +249,6 @@ export default {
       currentPage: 5,
     };
   },
-  components: { Banner, NewPost, MiniDiscussion, Notification, Sticker }
+  components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
 };
 </script>

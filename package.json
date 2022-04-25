@@ -12,6 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@nuxtjs/auth-next": "4.9.1",
     "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
