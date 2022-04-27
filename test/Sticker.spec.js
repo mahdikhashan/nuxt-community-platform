@@ -5,5 +5,6 @@ describe('Sticker', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(Sticker)
     expect(wrapper.vm).toBeTruthy()
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

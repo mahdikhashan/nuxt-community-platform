@@ -5,5 +5,6 @@ describe('Tag', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(Tag)
     expect(wrapper.vm).toBeTruthy()
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

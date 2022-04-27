@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation is a Vue instance 1`] = `
+"<div class=\\"
+    flex
+    bg-blue-900
+    items-center
+    justify-between
+    xl:px-24
+    lg:px-10
+    gap-4
+  \\">
+  <div class=\\"flex gap-2 py-2\\">
+    <nuxt-link to=\\"/\\">
+      <div class=\\"w-36\\"><img src=\\"https://us.v-cdn.net/6030147/uploads/D1BCSTA1KCGQ/expensify-community.png\\" alt=\\"logo\\"></div>
+    </nuxt-link>
+    <link address=\\"/discussions\\">
+    <link address=\\"/categories\\">
+  </div>
+  <!---->
+  <div class=\\"flex items-center justify-center gap-1\\">
+    <div class=\\"relative\\"><button class=\\"text-white hover:bg-blue-500 p-2 rounded-md\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\">
+          <path d=\\"M10.01 4.543c-3.036 0-5.496 2.453-5.496 5.48 0 3.027 2.46 5.48 5.496 5.48 3.034 0 5.495-2.453 5.495-5.48 0-3.027-2.46-5.48-5.495-5.48m10.647 16.072l-.024.025c-.043.043-.09.083-.14.12-.518.388-1.254.287-1.712-.17l-4.819-4.82a6.988 6.988 0 01-3.95 1.218C6.14 16.988 3 13.857 3 9.994S6.14 3 10.011 3c3.874 0 7.013 3.131 7.013 6.994 0 1.47-.458 2.835-1.236 3.962l4.805 4.806c.504.505.556 1.337.064 1.853\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"></path>
+        </svg></button></div>
+    <div class=\\"flex flex-row items-center\\">
+      <div class=\\"relative\\"><button class=\\"text-white hover:bg-blue-500 p-2 rounded-md\\">
+          <div><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\">
+              <path d=\\"M19.5 17.682c-1.961-1.787-3-3.68-3-5.682V9c0-2.31-1.4-4.132-3.703-4.448h-1.594C8.9 4.868 7.5 6.69 7.5 9v3c0 2.002-1.039 3.895-3 5.682v.818h15v-.818zM3.5 20a.5.5 0 01-.5-.5v-2.268c0-.146.064-.285.174-.38C5.058 15.235 6 13.618 6 12V9c0-2.739 1.667-5.477 5-5.934v-.108c0-.529.304-.958.677-.958h.646c.374 0 .677.422.677.951v.115c3.333.457 5 3.195 5 5.934v3c0 1.618.942 3.235 2.826 4.853a.5.5 0 01.174.379V19.5a.5.5 0 01-.5.5H14a2 2 0 11-4 0H3.5z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"></path>
+            </svg></div>
+        </button>
+        <!---->
+      </div>
+      <div><button class=\\"text-white hover:bg-blue-500 p-2 rounded-md\\">
+          <div><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" focusable=\\"false\\" aria-hidden=\\"true\\">
+              <path d=\\"M20.5 5A1.5 1.5 0 0122 6.5v11a1.5 1.5 0 01-1.5 1.5h-17A1.5 1.5 0 012 17.5v-11A1.5 1.5 0 013.5 5h17zm0 2.339l-4.695 3.653.015.016S19.225 15.82 19 16c-.186.15-3.047-2.671-4.023-3.643l-.323-.323a.427.427 0 01-.06-.1l-1.827 1.42c-.451.35-1.083.35-1.534 0l-1.827-1.42a.427.427 0 01-.06.1l-.323.323C8.047 13.329 5.186 16.15 5 16c-.225-.18 3.18-4.992 3.18-4.992l.015-.016L3.5 7.339V17.5h17V7.339zM19.134 6.5H4.865L12 12.05l7.134-5.55z\\" fill=\\"currentColor\\" fill-rule=\\"evenodd\\"></path>
+            </svg></div>
+        </button>
+        <!---->
+      </div> <button class=\\"hover:bg-blue-500 p-2 rounded-md\\"><img src=\\"avatar.jpg\\" class=\\"w-6 rounded-full m-2\\">
+        <!----></button>
+    </div>
+  </div>
+</div>"
+`;

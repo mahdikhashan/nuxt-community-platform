@@ -1,5 +1,6 @@
 <template>
   <button
+    @click="$emit('click')"
     class="
       flex
       gap-4

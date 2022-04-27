@@ -5,5 +5,6 @@ describe('Categories', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(Categories)
     expect(wrapper.vm).toBeTruthy()
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

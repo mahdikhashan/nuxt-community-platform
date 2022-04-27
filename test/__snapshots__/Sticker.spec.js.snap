@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sticker is a Vue instance 1`] = `
+"<div class=\\"
+    flex
+    bg-gray-200
+    items-center
+    justify-between
+    p-4
+    rounded-md
+    border-gray-700
+    border-[1px]
+  \\">
+  <div></div>
+</div>"
+`;

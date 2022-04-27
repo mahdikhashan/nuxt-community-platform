@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer is a Vue instance 1`] = `
+"<div class=\\"flex justify-between items-center bg-gray-100 p-6\\"><pre class=\\"text-sm text-gray-500\\"> © Community Platform</pre>
+</div>"
+`;
