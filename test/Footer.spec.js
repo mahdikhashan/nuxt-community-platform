@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Tag from '@/components/Tag.vue'
+import Footer from '@/components/Footer.vue'
 
-describe('Tag', () => {
+describe('Footer', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(Tag)
+    const wrapper = mount(Footer)
     expect(wrapper.vm).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
   })

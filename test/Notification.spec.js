@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Tag from '@/components/Tag.vue'
+import Notification from '@/components/Notification.vue'
 
-describe('Tag', () => {
+describe('Notification', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(Tag)
+    const wrapper = mount(Notification)
     expect(wrapper.vm).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
   })
