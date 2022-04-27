@@ -1,4 +1,4 @@
-[x] fix search in navigation focus
-[] Github pipeline
-[] Deploy netlify
-[] Test components
+- [x] fix search in navigation focus
+- [x] Github pipeline
+- [x] Deploy netlify
+- [] Test components
