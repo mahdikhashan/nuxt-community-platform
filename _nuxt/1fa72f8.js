@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{279:function(n,e,t){"use strict";t.r(e);var l={name:"DiscussionsPage",layout:"default",transition:"fade"},o=t(13),component=Object(o.a)(l,(function(){var n=this,e=n.$createElement;return(n._self._c||e)("div",[n._v("Discussions")])}),[],!1,null,null,null);e.default=component.exports}}]);
