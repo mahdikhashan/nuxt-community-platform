@@ -159,13 +159,13 @@ export default {
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
   computed: {
     token() {
-      return this.$store.getters('authentication/getToken')
+      return this.$store.getters['authentication/getToken']
     },
     discussions() {
-      return this.$store.getters('discussion/getDiscussions')
+      return this.$store.getters['discussion/getDiscussions']
     },
     tags() {
-      return this.$store.getters('discussion/getTags')
+      return this.$store.getters['discussion/getTags']
     }
   },
   mounted() {
