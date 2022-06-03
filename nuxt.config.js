@@ -1,4 +1,8 @@
 export default {
+  publicRuntimeConfig: {
+    enableMockserver: false,
+  },
+  ssr: false,
   target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -19,7 +23,9 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {src: '~/plugins/mock', ssr: false},
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

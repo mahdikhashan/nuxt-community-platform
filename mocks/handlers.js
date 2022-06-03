@@ -14,5 +14,9 @@ export const handler = [
 
     return res(ctx.status(200));
   }),
-  rest.get("/.netlify/functions/user", null),
+  rest.get("/.netlify/functions/user", (req, res, ctx) => {
+    return res(
+      ctx.status(200)
+    )
+  }),
 ];
