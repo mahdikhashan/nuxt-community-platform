@@ -1,3 +1,47 @@
+<script>
+import Banner from "../components/Banner.vue";
+import NewPost from "../components/NewPost.vue";
+import MiniDiscussion from "../components/MiniDiscussion.vue";
+import Notification from "../components/Notification.vue";
+import Sticker from "../components/Sticker.vue";
+import { mapGetters } from "vuex";
+
+export default {
+  name: "IndexPage",
+  middleware: "auth",
+  layout: "default",
+  data() {
+    return {
+      isAuthenticated: true,
+      items: [
+        {
+          text: "Admin",
+          href: "#",
+        },
+        {
+          text: "Manage",
+          href: "#",
+        },
+        {
+          text: "Library",
+          active: true,
+        },
+      ],
+      pages: 100,
+      currentPage: 5,
+    };
+  },
+  components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
+  computed: {
+    ...mapGetters("discussion", ["getDiscussions", "getTags"]),
+  },
+  mounted() {
+    this.$store.dispatch("authentication/getToken");
+    this.$store.dispatch("discussion/getTags");
+  },
+};
+</script>
+
 <template>
   <div>
     <Banner />
@@ -123,54 +167,12 @@
         <section class="block">
           <h3 class="font-bold text-lg pt-4 pb-2">Popular Tags</h3>
           <div>
-            <tag 
-              class="px-[2px]"
-              v-for="tag in getTags" :key="tag">{{ tag }}</tag>
+            <tag class="px-[2px]" v-for="tag in getTags" :key="tag">{{
+              tag
+            }}</tag>
           </div>
         </section>
       </aside>
     </main>
   </div>
 </template>
-
-<script>
-import Banner from "../components/Banner.vue";
-import NewPost from "../components/NewPost.vue";
-import MiniDiscussion from "../components/MiniDiscussion.vue";
-import Notification from "../components/Notification.vue";
-import Sticker from "../components/Sticker.vue";
-import { mapGetters } from "vuex";
-
-export default {
-  name: "IndexPage",
-  data() {
-    return {
-      isAuthenticated: true,
-      items: [
-        {
-          text: "Admin",
-          href: "#",
-        },
-        {
-          text: "Manage",
-          href: "#",
-        },
-        {
-          text: "Library",
-          active: true,
-        },
-      ],
-      pages: 100,
-      currentPage: 5,
-    };
-  },
-  components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
-  computed: {
-    ...mapGetters("discussion", ["getDiscussions", "getTags"]),
-  },
-  mounted() {
-    this.$store.dispatch("authentication/getToken");
-    this.$store.dispatch("discussion/getTags");
-  },
-};
-</script>

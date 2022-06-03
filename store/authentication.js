@@ -1,11 +1,13 @@
 export const state = () => ({
     token: "",
-    ip: ""
+    ip: "",
+    user: {},
 })
 
 export const getters = {
     getIp: (state) => state.ip,
-    getToken: (state) => state.token
+    getToken: (state) => state.token,
+    getUserDetail: (state) => state.user,
 }
 
 export const mutations = {
@@ -28,15 +30,12 @@ export const mutations = {
 }
 
 export const actions = {
-    
     async getIP ({commit}) {
         const ip = await this.$axios.$get('http://icanhazip.com')
         commit('SET_IP', ip)
     },
-
     async getToken ({commit}) {
         const token = await this.$axios.$get('.netlify/functions/token')
         commit('SET_TOKEN', token)
     }
-
 }
