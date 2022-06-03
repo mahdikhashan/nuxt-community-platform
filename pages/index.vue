@@ -36,7 +36,9 @@
       <aside class="w-full xl:w-[30%] px-6 py-4">
         <div v-if="!isAuthenticated" class="flex flex-col gap-3 mb-8">
           <span class="text-black font-bold text-xl">Welcome!</span>
-          <p class="text-sm text-gray-700">It looks like you're new here. Sign in or register to get started.</p>
+          <p class="text-sm text-gray-700">
+            It looks like you're new here. Sign in or register to get started.
+          </p>
           <div class="flex gap-4">
             <Button>Sign In</Button>
             <Button gray="true">Register</Button>
@@ -120,7 +122,7 @@
         </section>
         <section class="block">
           <h3 class="font-bold text-lg pt-4 pb-2">Popular Tags</h3>
-          {{ tags }}
+          <tag v-for="tag in tags" :key="tag">{{ tag }}</tag>
         </section>
       </aside>
     </main>
@@ -135,7 +137,7 @@ import Notification from "../components/Notification.vue";
 import Sticker from "../components/Sticker.vue";
 export default {
   name: "IndexPage",
-  data() { 
+  data() {
     return {
       isAuthenticated: true,
       items: [
@@ -159,18 +161,18 @@ export default {
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
   computed: {
     token() {
-      return this.$store.getters['authentication/getToken']
+      return this.$store.getters["authentication/getToken"];
     },
     discussions() {
-      return this.$store.getters['discussion/getDiscussions']
+      return this.$store.getters["discussion/getDiscussions"];
     },
     tags() {
-      return this.$store.getters['discussion/getTags']
-    }
+      return this.$store.getters["discussion/getTags"];
+    },
   },
   mounted() {
-    this.$store.dispatch('authentication/getToken')
-    this.$store.dispatch('discussion/getTags')
-  }
+    this.$store.dispatch("authentication/getToken");
+    this.$store.dispatch("discussion/getTags");
+  },
 };
 </script>

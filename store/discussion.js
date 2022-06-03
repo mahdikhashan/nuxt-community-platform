@@ -26,7 +26,7 @@ export const actions = {
     },
 
     async getTags ({commit}) {
-        const tags = await this.$axios.$get('.netlify/functions/tags')
+        const tags = await this.$axios.$get('.netlify/functions/tags').tags
         commit('SET_TAGS', tags)
     }
 
