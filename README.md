@@ -1,5 +1,7 @@
 # Community Platform
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bd2c4832-2e6f-42db-9075-359dd001e875/deploy-status)](https://app.netlify.com/sites/sensational-cascaron-f558e4/deploys)
+
 ## Build Setup
 
 ```bash
