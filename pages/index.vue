@@ -163,88 +163,6 @@ export default {
           active: true,
         },
       ],
-      discussions: [
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-        {
-          avatar:
-            "https://us.v-cdn.net/6030147/uploads/userpics/138/nXPSYL5PE8V87.jpg",
-          author: "Mahdi Khashan",
-          type: "Announcement",
-          views: 200,
-          comments: 3,
-          date: "March 2021",
-          bookmarked: false,
-        },
-      ],
       pages: 100,
       currentPage: 5,
     };
@@ -253,6 +171,9 @@ export default {
   computed: {
     token() {
       return this.$store.getters('authentication/getToken')
+    },
+    discussions() {
+      return this.$store.getters('discussion/getDiscussions')
     }
   },
   mounted() {

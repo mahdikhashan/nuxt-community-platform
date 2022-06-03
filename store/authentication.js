@@ -39,5 +39,4 @@ export const actions = {
         commit('SET_TOKEN', token)
     }
 
-
 }
