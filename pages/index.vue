@@ -122,8 +122,11 @@
         </section>
         <section class="block">
           <h3 class="font-bold text-lg pt-4 pb-2">Popular Tags</h3>
-          {{ getTags }}
-          <tag v-for="tag in getTags" :key="tag">{{ tag }}</tag>
+          <div>
+            <tag 
+              class="px-[2px]"
+              v-for="tag in getTags" :key="tag">{{ tag }}</tag>
+          </div>
         </section>
       </aside>
     </main>

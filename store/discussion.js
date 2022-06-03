@@ -22,12 +22,12 @@ export const actions = {
 
     async getItems ({commit}) {
         const discussions = await this.$axios.$get('.netlify/functions/discussion')
-        commit('SET_DISCUSSIONS', discussions)
+        commit('SET_DISCUSSIONS', discussions.discussions)
     },
 
     async getTags ({commit}) {
-        const tags = await this.$axios.$get('.netlify/functions/tags').tags
-        commit('SET_TAGS', tags)
+        const tags = await this.$axios.$get('.netlify/functions/tags')
+        commit('SET_TAGS', tags.tags)
     }
 
 }
