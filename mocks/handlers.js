@@ -5,7 +5,7 @@ export const handler = [
   rest.post("/.netlify/functions/login", (req, res, ctx) => {
     let token = jwt.sign(
         {
-          username: "mahdikhashan1@gmail.com",
+          username: "admin@randomsite.com",
           password: "super-hard-password",
         },
         "secret-no-laugh"
