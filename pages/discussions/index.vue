@@ -5,7 +5,7 @@
 <script>
 export default {
   name: "DiscussionsPage",
-  layout: "default",
+  layout: "base",
   transition: "fade",
   middleware: "auth",
 };

@@ -69,7 +69,7 @@
 import Categories from "../../components/Categories.vue";
 export default {
     name: "CategoriesPage",
-    layout: "default",
+    layout: "base",
     middleware: "auth",
     components: { Categories }
 };

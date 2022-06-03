@@ -376,6 +376,7 @@
                     text-gray-700 text-left
                     hover:bg-blue-100
                   "
+                  @click="signOut"
                 >
                   Sign Out
                 </button>
@@ -426,6 +427,9 @@ export default {
     enableProfile() {
       this.isProfile = !this.isProfile;
     },
+    async signOut() {
+      await this.$auth.logout()
+    }
   },
 };
 </script>
