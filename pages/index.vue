@@ -120,18 +120,7 @@
         </section>
         <section class="block">
           <h3 class="font-bold text-lg pt-4 pb-2">Popular Tags</h3>
-          <Tag>Deep Dive 230</Tag>
-          <Tag>Track 50</Tag>
-          <Tag>How-to 390</Tag>
-          <Tag>FAQ 290</Tag>
-          <Tag>Success approved! 212</Tag>
-          <Tag>tax</Tag>
-          <Tag>demo 1</Tag>
-          <Tag>newsletter</Tag>
-          <Tag>Webinar</Tag>
-          <Tag>Cash</Tag>
-          <Tag>Travel 125</Tag>
-          <Tag>Two Factor Authentication (2FA)</Tag>
+          {{ tags }}
         </section>
       </aside>
     </main>
@@ -174,6 +163,9 @@ export default {
     },
     discussions() {
       return this.$store.getters('discussion/getDiscussions')
+    },
+    tags() {
+      return this.$store.getters('discussion/getTags')
     }
   },
   mounted() {
