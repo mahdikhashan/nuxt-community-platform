@@ -9,7 +9,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "IndexPage",
   middleware: "auth",
-  layout: "default",
+  layout: "base",
   data() {
     return {
       isAuthenticated: true,
@@ -36,7 +36,6 @@ export default {
     ...mapGetters("discussion", ["getDiscussions", "getTags"]),
   },
   mounted() {
-    this.$store.dispatch("authentication/getToken");
     this.$store.dispatch("discussion/getTags");
   },
 };
