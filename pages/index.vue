@@ -170,6 +170,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch('authentication/getToken')
+    this.$store.dispatch('discussion/getTags')
   }
 };
 </script>
