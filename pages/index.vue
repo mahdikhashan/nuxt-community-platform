@@ -122,7 +122,8 @@
         </section>
         <section class="block">
           <h3 class="font-bold text-lg pt-4 pb-2">Popular Tags</h3>
-          <tag v-for="tag in tags" :key="tag">{{ tag }}</tag>
+          {{ getTags }}
+          <tag v-for="tag in getTags" :key="tag">{{ tag }}</tag>
         </section>
       </aside>
     </main>
@@ -135,6 +136,8 @@ import NewPost from "../components/NewPost.vue";
 import MiniDiscussion from "../components/MiniDiscussion.vue";
 import Notification from "../components/Notification.vue";
 import Sticker from "../components/Sticker.vue";
+import { mapGetters } from "vuex";
+
 export default {
   name: "IndexPage",
   data() {
@@ -160,15 +163,7 @@ export default {
   },
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
   computed: {
-    token() {
-      return this.$store.getters["authentication/getToken"];
-    },
-    discussions() {
-      return this.$store.getters["discussion/getDiscussions"];
-    },
-    tags() {
-      return this.$store.getters["discussion/getTags"];
-    },
+    ...mapGetters("discussion", ["getDiscussions", "getTags"]),
   },
   mounted() {
     this.$store.dispatch("authentication/getToken");
