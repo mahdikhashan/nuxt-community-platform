@@ -1,25 +1,43 @@
 export const state = () => ({
-    token: ""
+    token: "",
+    ip: ""
 })
 
+export const getters = {
+    getIp: (state) => state.ip,
+    getToken: (state) => state.token
+}
+
 export const mutations = {
-    login(state, username, password) {
-        //
+    LOGIN(state, username, password) {
     },
-    logout(state, id) {
-        //
+    LOGOUT(state, id) {
     },
-    signupByNumber(state, name, password, number) {
-        //
+    SET_TOKEN(state, token) {
+        state.token = token
     },
-    signupByEmail(state, email, password) {
-        //
+    SIGNUP_BY_NUMBER(state, name, password, number) {
     },
-    signupByGmail(state, token) {
-        //
+    SIGNUP_BY_EMAIL(state, email, password) {
+    },
+    SIGNUP_BY_GMAIL(state, token) {
+    },
+    SET_IP(state, ip) {
+        state.ip = ip
     }
 }
 
 export const actions = {
-    //
+    
+    async getIP ({commit}) {
+        const ip = await this.$axios.$get('http://icanhazip.com')
+        commit('SET_IP', ip)
+    },
+
+    async getToken ({commit}) {
+        const token = await this.$axios.$get('.netlify/functions/token')
+        commit('SET_TOKEN', token)
+    }
+
+
 }

@@ -34,7 +34,7 @@
         </div>
       </section>
       <aside class="w-full xl:w-[30%] px-6 py-4">
-        <div v-if="isAuthenticated" class="flex flex-col gap-3 mb-8">
+        <div v-if="!isAuthenticated" class="flex flex-col gap-3 mb-8">
           <span class="text-black font-bold text-xl">Welcome!</span>
           <p class="text-sm text-gray-700">It looks like you're new here. Sign in or register to get started.</p>
           <div class="flex gap-4">
@@ -146,7 +146,7 @@ import Notification from "../components/Notification.vue";
 import Sticker from "../components/Sticker.vue";
 export default {
   name: "IndexPage",
-  data() {
+  data() { 
     return {
       isAuthenticated: true,
       items: [
@@ -250,5 +250,13 @@ export default {
     };
   },
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
+  computed: {
+    token() {
+      return this.$store.getters('authentication/getToken')
+    }
+  },
+  mounted() {
+    this.$store.dispatch('authentication/getToken')
+  }
 };
 </script>
