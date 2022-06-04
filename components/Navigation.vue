@@ -71,9 +71,9 @@
           <div v-else>Cancel</div>
         </button>
       </div>
-      <div v-if="isAuthenticated">
-        <div class="">
-          <Button bordered="true" small="true">Sign In</Button>
+      <div v-if="!isUserLoggedIn">
+        <div>
+          <Button bordered="true" small="false">Sign In</Button>
           <Button gray="true" small="true">Register</Button>
         </div>
       </div>
