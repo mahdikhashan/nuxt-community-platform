@@ -34,7 +34,7 @@ export default {
       return [
         {
           "bg-transparent text-white py-2 px-8 rounded-lg": true,
-          "px-4": this.small,
+          "px-4 text-sm": this.small,
           "bg-green-500 text-white hover:bg-green-600": this.primary,
           "border-[1px] bg-transparent border-white hover:bg-transparent": this.bordered,
           "bg-transparent border text-white": this.secondary,
