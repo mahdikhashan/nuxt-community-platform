@@ -4,11 +4,13 @@ import NewPost from "../components/NewPost.vue";
 import MiniDiscussion from "../components/MiniDiscussion.vue";
 import Notification from "../components/Notification.vue";
 import Sticker from "../components/Sticker.vue";
+import authentication from "~/mixins/authentication.js";
 import { mapGetters } from "vuex";
 
 export default {
   name: "IndexPage",
   middleware: "auth",
+  mixins: [authentication],
   layout: "base",
   data() {
     return {
