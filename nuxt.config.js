@@ -90,12 +90,11 @@ export default {
       },
     },
     redirect: {
-      login: "/",
+      login: "/login",
       logout: "/",
-      callback: "/",
+      callback: "/login",
       home: "/",
     },
-    watchLoggedIn: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
