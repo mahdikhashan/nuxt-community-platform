@@ -73,7 +73,7 @@
       </div>
       <div v-if="!isUserLoggedIn">
         <div>
-          <Button bordered="true" small="false">Sign In</Button>
+          <Button bordered small="true">Sign In</Button>
           <Button gray="true" small="true">Register</Button>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default {
     },
     primary: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     secondary: {
       type: Boolean,
@@ -33,7 +33,7 @@ export default {
     classes() {
       return [
         {
-          "py-2 px-8 rounded-lg": true,
+          "bg-transparent text-white py-2 px-8 rounded-lg": true,
           "px-4": this.small,
           "bg-green-500 text-white hover:bg-green-600": this.primary,
           "border-[1px] bg-transparent border-white hover:bg-transparent": this.bordered,
