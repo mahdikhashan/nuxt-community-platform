@@ -282,7 +282,7 @@
           </div>
         </div>
         <button @click="enableProfile" class="hover:bg-blue-500 p-2 rounded-md">
-          <img class="w-6 rounded-full m-2" src="avatar.jpg" />
+          <img class="w-6 rounded-full" src="avatar.jpg" />
           <div
             v-if="isProfile"
             class="
