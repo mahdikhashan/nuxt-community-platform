@@ -310,7 +310,7 @@
                   <img class="w-24 rounded-full m-2" src="avatar.jpg" />
                 </nuxt-link>
                 <button class="font-semibold hover:text-blue-500">
-                  {{ user }}
+                  {{ userName }}
                 </button>
               </div>
               <div class="divide-y divide-slate-200 flex flex-col py-2">
@@ -403,8 +403,14 @@ export default {
     };
   },
   computed: {
-    user() {
-      return this.$auth.user
+    userName() {
+      return this.$auth.user.name
+    },
+    userEmail() {
+      return this.$auth.user.email
+    },
+    userID() {
+      return this.$auth.user.id
     },
     isUserLoggedIn() {
       return this.$auth.loggedIn
