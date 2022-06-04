@@ -39,6 +39,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("discussion/getTags");
+    this.$store.dispatch("category/getCategories");
   },
 };
 </script>
@@ -141,7 +142,7 @@ export default {
             </li>
             <li
               class="w-full flex flex-auto justify-between hover:text-blue-600"
-              v-for="category in categories"
+              v-for="category in getCategories"
               :key="category"
             >
               <nuxt-link to="/">{{ category.name }}</nuxt-link>
