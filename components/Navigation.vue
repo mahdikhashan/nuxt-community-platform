@@ -390,8 +390,11 @@
 </template>
 
 <script>
+import authentication from "~/mixins/authentication.js"
+
 export default {
   name: "Navigation",
+  mixins: [authentication],
   data() {
     return {
       sticky: true,
@@ -401,8 +404,6 @@ export default {
       isProfile: false,
       isAuthenticated: false,
     };
-  },
-  computed: {
   },
   methods: {
     enableSearch() {
