@@ -35,6 +35,7 @@ export default {
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
   computed: {
     ...mapGetters("discussion", ["getDiscussions", "getTags"]),
+    ...mapGetters("category", ["getCategories"]),
   },
   mounted() {
     this.$store.dispatch("discussion/getTags");
@@ -140,27 +141,11 @@ export default {
             </li>
             <li
               class="w-full flex flex-auto justify-between hover:text-blue-600"
+              v-for="category in categories"
+              :key="category"
             >
-              <nuxt-link to="/">Announcements</nuxt-link>
-              <span>201</span>
-            </li>
-            <li
-              class="w-full flex flex-auto justify-between hover:text-blue-600"
-            >
-              <nuxt-link to="/">Help Docs and Webinars</nuxt-link>
-              <span>504</span>
-            </li>
-            <li
-              class="w-full flex flex-auto justify-between hover:text-blue-600"
-            >
-              <nuxt-link to="/">Questions about community</nuxt-link>
-              <span>2.1K</span>
-            </li>
-            <li
-              class="w-full flex flex-auto justify-between hover:text-blue-600"
-            >
-              <nuxt-link to="/">Community.org</nuxt-link>
-              <span>151</span>
+              <nuxt-link to="/">{{ category.name }}</nuxt-link>
+              <span>{{ category.count }}</span>
             </li>
           </ul>
         </section>
