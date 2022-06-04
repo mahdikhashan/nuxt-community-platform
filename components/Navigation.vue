@@ -310,7 +310,7 @@
                   <img class="w-24 rounded-full m-2" src="avatar.jpg" />
                 </nuxt-link>
                 <button class="font-semibold hover:text-blue-500">
-                  Mahdi.Khashan
+                  {{ user }}
                 </button>
               </div>
               <div class="divide-y divide-slate-200 flex flex-col py-2">
@@ -401,6 +401,14 @@ export default {
       isProfile: false,
       isAuthenticated: false,
     };
+  },
+  computed: {
+    user() {
+      return this.$auth.user
+    },
+    isUserLoggedIn() {
+      return this.$auth.loggedIn
+    }
   },
   methods: {
     enableSearch() {

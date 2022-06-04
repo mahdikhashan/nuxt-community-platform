@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <form @submit.prevent="userLogin">
-      <div>
-        <label>Username</label>
-        <input type="text" v-model="login.username" />
-      </div>
-      <div>
-        <label>Password</label>
-        <input type="text" v-model="login.password" />
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+  <div class="container mx-auto flex bg-blue-500">
+    <div class="h-fit">
+      <form @submit.prevent="userLogin">
+        <div>
+          <label>Username</label>
+          <input type="text" v-model="login.username" />
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="text" v-model="login.password" />
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "LoginPage",
+  layout: "base",
   data() {
     return {
       login: {
