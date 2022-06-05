@@ -23,9 +23,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: "~/plugins/mock", ssr: false },
-  ],
+  plugins: [{ src: "~/plugins/mock", ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -57,43 +55,20 @@ export default {
   auth: {
     strategies: {
       local: {
-        token: {
-          property: "token",
-          global: true,
-          required: true,
-          type: "Bearer",
-          maxAge: 3600,
-        },
-        refreshToken: {
-          property: "token",
-          data: "token",
-          maxAge: 60 * 60 * 24 * 30,
-        },
         endpoints: {
           login: {
             url: "/.netlify/functions/login",
             method: "post",
+            propertyName: "token"
           },
           user: {
             url: "/.netlify/functions/user",
             method: "get",
+            propertyName: "user"
           },
-          logout: {
-            url: "/.netlify/functions/logout",
-            method: "post",
-          },
-          refresh: {
-            url: "/.netlify/functions/refresh",
-            method: "post",
-          },
+          logout: false,
         },
       },
-    },
-    redirect: {
-      login: "/login",
-      logout: "/",
-      callback: "/login",
-      home: "/",
     },
   },
 

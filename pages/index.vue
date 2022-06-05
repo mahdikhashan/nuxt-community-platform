@@ -86,8 +86,8 @@ export default {
             It looks like you're new here. Sign in or register to get started.
           </p>
           <div class="flex gap-4">
-            <Button primary="true">Sign In</Button>
-            <Button gray="true">Register</Button>
+            <Button primary="true" @click="loginUser">Sign In</Button>
+            <Button gray="true" @click="registerRedirect">Register</Button>
           </div>
         </div>
         <NewPost />

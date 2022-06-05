@@ -8,6 +8,8 @@ export const getters = {
     getIp: (state) => state.ip,
     getToken: (state) => state.token,
     getUserDetail: (state) => state.user,
+    isAuthenticated: (state) => state.auth.loggedIn,
+    loggedInUser: (state) => state.auth.user,
 }
 
 export const mutations = {
