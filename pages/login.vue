@@ -22,6 +22,7 @@
 export default {
   name: "LoginPage",
   layout: "base",
+  middleware: 'guest',
   data() {
     return {
       login: {

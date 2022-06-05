@@ -9,7 +9,6 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "IndexPage",
-  middleware: "auth",
   mixins: [authentication],
   layout: "base",
   data() {
