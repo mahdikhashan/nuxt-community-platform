@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto flex bg-blue-500">
     <div class="h-fit">
-      <form @submit.prevent="userLogin">
+      <form @submit.prevent="userLogin" method="post">
         <div>
           <label>Username</label>
           <input type="text" v-model="login.username" />
@@ -28,21 +28,20 @@ export default {
         username: "",
         password: "",
       },
+      error: null,
     };
   },
   methods: {
     async userLogin() {
       try {
-        let response = await this.$auth.loginWith("local", {
+        await this.$auth.loginWith("local", {
           data: this.login,
         });
-        console.log(response);
+        this.$router.push("/")
       } catch (e) {
-        console.log(e);
+        this.error = e.response.data.message
       }
     },
   },
 };
 </script>
-
-<style></style>
