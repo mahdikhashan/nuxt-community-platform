@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto flex bg-blue-500">
     <div class="h-fit">
-      <form @submit.prevent="userLogin" method="post">
+      <form @submit.prevent="registerUser">
         <div>
           <label>Username</label>
           <input type="text" v-model="login.username" />
@@ -26,7 +26,6 @@
 export default {
   name: "RegisterPage",
   layout: "base",
-  middleware: 'guest',
   data() {
     return {
       login: {
@@ -40,13 +39,18 @@ export default {
   methods: {
     async registerUser() {
       try {
-        await this.$axios.post("register", {
+        console.log("afsdfasdfasdfasd")
+        await this.$axios.post(".netlify/functions/register", {
           ...this.login,
         });
+
+        alert("sdfsdf")
 
         await this.$auth.loginWith("local", {
           data: this.login,
         });
+
+        alert("sdfsdf")
 
         this.$router.push("/");
       } catch (e) {

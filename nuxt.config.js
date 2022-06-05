@@ -48,10 +48,6 @@ export default {
     baseURL: "/",
   },
 
-  router: {
-    middleware: ["auth"],
-  },
-
   auth: {
     strategies: {
       local: {
