@@ -13,10 +13,7 @@
     <div class="flex gap-2 py-2">
       <nuxt-link to="/">
         <div class="w-36">
-          <img
-            src="https://us.v-cdn.net/6030147/uploads/D1BCSTA1KCGQ/expensify-community.png"
-            alt="logo"
-          />
+          <img src="logo.webp" alt="logo" />
         </div>
       </nuxt-link>
       <Link address="/discussions" v-if="!isSearch">Discussions</Link>
@@ -24,20 +21,7 @@
     </div>
     <div v-if="isSearch" class="flex flex-auto relative items-center">
       <span class="translate-x-9 text-gray-400">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          focusable="false"
-          aria-hidden="true"
-        >
-          <path
-            d="M10.01 4.543c-3.036 0-5.496 2.453-5.496 5.48 0 3.027 2.46 5.48 5.496 5.48 3.034 0 5.495-2.453 5.495-5.48 0-3.027-2.46-5.48-5.495-5.48m10.647 16.072l-.024.025c-.043.043-.09.083-.14.12-.518.388-1.254.287-1.712-.17l-4.819-4.82a6.988 6.988 0 01-3.95 1.218C6.14 16.988 3 13.857 3 9.994S6.14 3 10.011 3c3.874 0 7.013 3.131 7.013 6.994 0 1.47-.458 2.835-1.236 3.962l4.805 4.806c.504.505.556 1.337.064 1.853"
-            fill="currentColor"
-            fill-rule="evenodd"
-          />
-        </svg>
+        <img src="search.svg" />
       </span>
       <input
         ref="search"
@@ -53,28 +37,34 @@
           class="text-white hover:bg-blue-500 p-2 rounded-md"
           @click="enableSearch"
         >
-          <svg
-            v-if="!isSearch"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <path
-              d="M10.01 4.543c-3.036 0-5.496 2.453-5.496 5.48 0 3.027 2.46 5.48 5.496 5.48 3.034 0 5.495-2.453 5.495-5.48 0-3.027-2.46-5.48-5.495-5.48m10.647 16.072l-.024.025c-.043.043-.09.083-.14.12-.518.388-1.254.287-1.712-.17l-4.819-4.82a6.988 6.988 0 01-3.95 1.218C6.14 16.988 3 13.857 3 9.994S6.14 3 10.011 3c3.874 0 7.013 3.131 7.013 6.994 0 1.47-.458 2.835-1.236 3.962l4.805 4.806c.504.505.556 1.337.064 1.853"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <div v-else>Cancel</div>
+          <span v-if="!isSearch">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <path
+                d="M10.01 4.543c-3.036 0-5.496 2.453-5.496 5.48 0 3.027 2.46 5.48 5.496 5.48 3.034 0 5.495-2.453 5.495-5.48 0-3.027-2.46-5.48-5.495-5.48m10.647 16.072l-.024.025c-.043.043-.09.083-.14.12-.518.388-1.254.287-1.712-.17l-4.819-4.82a6.988 6.988 0 01-3.95 1.218C6.14 16.988 3 13.857 3 9.994S6.14 3 10.011 3c3.874 0 7.013 3.131 7.013 6.994 0 1.47-.458 2.835-1.236 3.962l4.805 4.806c.504.505.556 1.337.064 1.853"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </span>
+
+          <span v-else>Cancel</span>
         </button>
       </div>
       <div v-if="!isUserLoggedIn">
         <div>
-          <Button bordered small="true">Sign In</Button>
-          <Button gray="true" small="true">Register</Button>
+          <nuxt-link to="/login">
+            <Button bordered small="true">Sign In</Button>
+          </nuxt-link>
+          <nuxt-link to="/register">
+            <Button gray="true" small="true">Register</Button>
+          </nuxt-link>
         </div>
       </div>
       <div v-else class="flex flex-row items-center">
@@ -254,17 +244,7 @@
                 <span class="font-semibold">Messages</span>
                 <nuxt-link to="/123">
                   <div class="w-5">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      class="css-r63kgg-iconStyles-standard icon-compose"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M23.591,1.27l-.9-.9a1.289,1.289,0,0,0-1.807,0l-.762.863,2.6,2.587.868-.751a1.24,1.24,0,0,0,.248-.373,1.255,1.255,0,0,0,0-1.052A1.232,1.232,0,0,0,23.591,1.27ZM19.5,20.5H3.5V4.5H15.4l1.4-1.431H2.751A1,1,0,0,0,2,4.07V20.939a1,1,0,0,0,1,1H20.011a1,1,0,0,0,1-1V7L19.5,8.445ZM21.364,3.449l-9.875,9.8-.867-.861,9.874-9.8-.867-.863-4.938,4.9-4.938,4.9L8.74,15.167l3.617-1.055,9.875-9.8Z"
-                      />
-                    </svg>
+                    <img src="message.svg" />
                   </div>
                 </nuxt-link>
               </div>
@@ -390,7 +370,7 @@
 </template>
 
 <script>
-import authentication from "~/mixins/authentication.js"
+import authentication from "~/mixins/authentication.js";
 
 export default {
   name: "Navigation",
@@ -431,8 +411,8 @@ export default {
       this.isProfile = !this.isProfile;
     },
     async signOut() {
-      await this.$auth.logout()
-    }
+      await this.$auth.logout();
+    },
   },
 };
 </script>
