@@ -119,7 +119,7 @@
               border-[2px]
             "
           >
-            <div >
+            <div>
               <div class="flex items-center justify-between p-3 border-b-2">
                 <span class="font-semibold">Notification</span>
                 <nuxt-link to="/123">
@@ -261,109 +261,114 @@
             </div>
           </div>
         </div>
-        <button @click="enableProfile" class="hover:bg-blue-500 p-2 rounded-md">
-          <img class="w-6 rounded-full" src="avatar.jpg" />
-          <div
-            v-if="isProfile"
-            class="
-              absolute
-              bg-white
-              rounded-md
-              z-50
-              w-[22rem]
-              -translate-x-[19rem]
-              shadow-md
-              border-[2px]
-            "
+        <div class="relative" v-click-out-side="closeProfile">
+          <button
+            @click="enableProfile"
+            class="hover:bg-blue-500 p-2 rounded-md"
           >
-            <div>
-              <div
-                class="
-                  flex flex-col
-                  items-center
-                  justify-between
-                  p-3
-                  border-b-[2px]
-                "
-              >
-                <nuxt-link to="/123">
-                  <img class="w-24 rounded-full m-2" src="avatar.jpg" />
-                </nuxt-link>
-                <button class="font-semibold hover:text-blue-500">
-                  {{ userName }}
-                </button>
-              </div>
-              <div class="divide-y divide-slate-200 flex flex-col py-2">
-                <button
+            <img class="w-6 rounded-full" src="avatar.jpg" />
+            <div
+              v-if="isProfile"
+              class="
+                absolute
+                bg-white
+                rounded-md
+                z-50
+                w-[22rem]
+                -translate-x-[19rem]
+                shadow-md
+                border-[2px]
+              "
+            >
+              <div>
+                <div
                   class="
-                    p-2
-                    mb-2
-                    text-sm text-gray-700 text-left
-                    hover:bg-blue-100
+                    flex flex-col
+                    items-center
+                    justify-between
+                    p-3
+                    border-b-[2px]
                   "
                 >
-                  Edit Profile
-                </button>
-                <div class="flex flex-col">
-                  <p class="text-xs text-gray-500 py-2">DISCUSSIONS</p>
-                  <button
-                    class="
-                      p-2
-                      text-sm text-gray-700 text-left
-                      hover:bg-blue-100
-                      flex
-                      justify-between
-                      items-center
-                    "
-                  >
-                    <p>Bookmarks</p>
-                    <span class="text-xs">2</span>
+                  <nuxt-link to="/123">
+                    <img class="w-24 rounded-full m-2" src="avatar.jpg" />
+                  </nuxt-link>
+                  <button class="font-semibold hover:text-blue-500">
+                    {{ userName }}
                   </button>
+                </div>
+                <div class="divide-y divide-slate-200 flex flex-col py-2">
                   <button
                     class="
                       p-2
+                      mb-2
                       text-sm text-gray-700 text-left
                       hover:bg-blue-100
-                      flex
-                      justify-between
-                      items-center
                     "
                   >
-                    <p>Drafts</p>
-                    <span class="text-xs"></span>
+                    Edit Profile
                   </button>
+                  <div class="flex flex-col">
+                    <p class="text-xs text-gray-500 py-2">DISCUSSIONS</p>
+                    <button
+                      class="
+                        p-2
+                        text-sm text-gray-700 text-left
+                        hover:bg-blue-100
+                        flex
+                        justify-between
+                        items-center
+                      "
+                    >
+                      <p>Bookmarks</p>
+                      <span class="text-xs">2</span>
+                    </button>
+                    <button
+                      class="
+                        p-2
+                        text-sm text-gray-700 text-left
+                        hover:bg-blue-100
+                        flex
+                        justify-between
+                        items-center
+                      "
+                    >
+                      <p>Drafts</p>
+                      <span class="text-xs"></span>
+                    </button>
+                    <button
+                      class="
+                        p-2
+                        text-sm text-gray-700 text-left
+                        hover:bg-blue-100
+                        flex
+                        justify-between
+                        items-center
+                      "
+                    >
+                      <p>My Discussions</p>
+                      <span class="text-xs">2</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="border-t-[2px] text-left flex py-2">
                   <button
                     class="
                       p-2
-                      text-sm text-gray-700 text-left
+                      text-sm
+                      w-full
+                      text-gray-700 text-left
                       hover:bg-blue-100
-                      flex
-                      justify-between
-                      items-center
                     "
+                    @click="signOut"
                   >
-                    <p>My Discussions</p>
-                    <span class="text-xs">2</span>
+                    Sign Out
                   </button>
                 </div>
               </div>
-              <div class="border-t-[2px] text-left flex py-2">
-                <button
-                  class="
-                    p-2
-                    text-sm
-                    w-full
-                    text-gray-700 text-left
-                    hover:bg-blue-100
-                  "
-                  @click="signOut"
-                >
-                  Sign Out
-                </button>
-              </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -398,13 +403,13 @@ export default {
       });
     },
     closeNotification() {
-      this.isNotification = !this.isNotification;
+      this.isNotification = false;
     },
     closeProfile() {
-      this.isProfile = !this.isProfile;
+      this.isProfile = false;
     },
     closeMessage() {
-      this.isMessage = !this.isMessage;
+      this.isMessage = false;
     },
     enableNotification() {
       this.isNotification = !this.isNotification;
