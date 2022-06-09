@@ -74,10 +74,12 @@
 </template>
 
 <script>
+import authentication from "~/mixins/authentication.js";
 import {mapGetters} from "vuex"
 
 export default {
   name: "SideMenu",
+  mixins: [authentication],
   computed: {
     ...mapGetters("discussion", ["getDiscussions", "getTags"]),
     ...mapGetters("category", ["getCategories"]),
