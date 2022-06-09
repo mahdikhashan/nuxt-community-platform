@@ -74,13 +74,17 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex"
+
 export default {
   name: "SideMenu",
   computed: {
     ...mapGetters("discussion", ["getDiscussions", "getTags"]),
+    ...mapGetters("category", ["getCategories"]),
   },
   mounted() {
     this.$store.dispatch("discussion/getTags");
+    this.$store.dispatch("category/getCategories");
   }
 };
 </script>

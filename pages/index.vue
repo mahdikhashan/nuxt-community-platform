@@ -5,7 +5,6 @@ import MiniDiscussion from "~/components/MiniDiscussion.vue";
 import Notification from "~/components/Notification.vue";
 import Sticker from "~/components/Sticker.vue";
 import authentication from "~/mixins/authentication.js";
-import { mapGetters } from "vuex";
 
 export default {
   name: "IndexPage",
@@ -32,13 +31,6 @@ export default {
     };
   },
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
-  computed: {
-    ...mapGetters("discussion", ["getDiscussions"]),
-    ...mapGetters("category", ["getCategories"]),
-  },
-  mounted() {
-    this.$store.dispatch("category/getCategories");
-  },
 };
 </script>
 
