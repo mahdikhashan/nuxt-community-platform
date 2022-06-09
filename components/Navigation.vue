@@ -68,7 +68,7 @@
         </div>
       </div>
       <div v-else class="flex flex-row items-center">
-        <div class="relative">
+        <div class="relative" v-click-out-side="closeNotification">
           <button
             class="text-white hover:bg-blue-500 p-2 rounded-md"
             @click="enableNotification"
@@ -119,7 +119,7 @@
               border-[2px]
             "
           >
-            <div>
+            <div >
               <div class="flex items-center justify-between p-3 border-b-2">
                 <span class="font-semibold">Notification</span>
                 <nuxt-link to="/123">
@@ -188,7 +188,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class="relative" v-click-out-side="closeMessage">
           <button
             @click="enableMessage"
             class="text-white hover:bg-blue-500 p-2 rounded-md"
@@ -371,9 +371,11 @@
 
 <script>
 import authentication from "~/mixins/authentication.js";
+import clickOutSide from "~/directives/clickoutside.js";
 
 export default {
   name: "Navigation",
+  directives: { clickOutSide },
   mixins: [authentication],
   data() {
     return {
@@ -394,6 +396,15 @@ export default {
       this.$nextTick(() => {
         document.querySelector('input[type="search"]').focus();
       });
+    },
+    closeNotification() {
+      this.isNotification = !this.isNotification;
+    },
+    closeProfile() {
+      this.isProfile = !this.isProfile;
+    },
+    closeMessage() {
+      this.isMessage = !this.isMessage;
     },
     enableNotification() {
       this.isNotification = !this.isNotification;
