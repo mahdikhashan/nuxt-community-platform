@@ -31,11 +31,20 @@ export default {
     };
   },
   components: { Banner, NewPost, MiniDiscussion, Notification, Sticker },
+  mounted() {
+    console.log("sadfsadf")
+    this.$notify({
+      group: "base",
+      title: "hello",
+      text: "Hello community user!"
+    })
+  }
 };
 </script>
 
 <template>
   <div>
+    <notifications group="base" />
     <Banner />
     <main
       class="

@@ -1,6 +1,6 @@
 <template>
-  <div class="container mx-auto flex bg-blue-500">
-    <div class="h-fit">
+  <div class="flex bg-blue-500">
+    <div class="">
       <form @submit.prevent="userLogin" method="post">
         <div>
           <label>Username</label>
@@ -21,7 +21,7 @@
 <script>
 export default {
   name: "LoginPage",
-  layout: "base",
+  layout: "default",
   data() {
     return {
       login: {
